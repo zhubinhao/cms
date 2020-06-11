@@ -1,18 +1,34 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
-<script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+<script lang='ts'>
 
-export default {
+import {Component, Provide, Vue, Watch} from 'vue-property-decorator'
+import {Getter,Action} from 'vuex-class'
+@Component({
   name: 'Home',
-  components: {
-    HelloWorld
+  components:{
+  }
+})
+export default class Home extends Vue {
+  @Provide() data: object ={}
+
+  @Getter rankMenu!:object
+
+  @Action public getHome!:any
+  
+  @Watch('rankMenu')
+  getCount(){
+    console.log(this.rankMenu)
+  }
+
+  created(){ 
+    this.getHome({id:104})
   }
 }
 </script>
+<style lang="sass" scoped>
+
+</style>
