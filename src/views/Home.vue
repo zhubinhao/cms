@@ -1,12 +1,13 @@
 <template>
   <div class="home">
+     home
   </div>
 </template>
 
 <script lang='ts'>
 
 import {Component, Provide, Vue, Watch} from 'vue-property-decorator'
-import {Getter,Action} from 'vuex-class'
+import {Getter,Action,State} from 'vuex-class'
 @Component({
   name: 'Home',
   components:{
@@ -14,21 +15,26 @@ import {Getter,Action} from 'vuex-class'
 })
 export default class Home extends Vue {
   @Provide() data: object ={}
+  
+  @State rankMenu1!:object
 
   @Getter rankMenu!:object
 
   @Action public getHome!:any
   
-  @Watch('rankMenu')
-  getCount(){
-    console.log(this.rankMenu)
-  }
+  // @Watch('rankMenu1')
+  // getCount(){
+  //   console.log(this.rankMenu1)
+  // }
 
   created(){ 
     this.getHome({id:104})
   }
 }
 </script>
-<style lang="sass" scoped>
+<style lang="scss" scoped >
+.home {
+  min-width: 1400px;
+}
 
 </style>

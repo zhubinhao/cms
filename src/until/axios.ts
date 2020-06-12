@@ -10,8 +10,7 @@ import { Message } from 'element-ui'
 // axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
 // axios.defaults.withCredentials = true
 const token = localStorage.getItem('auth') // 获取Cookie
-// axios.defaults.headers.common['auth'] = token || 'sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221727f7a7e5a228-06d45048cb6177-f7d1d38-2073600-1727f7a7e5b903%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22%24device_id%22%3A%221727f7a7e5a228-06d45048cb6177-f7d1d38-2073600-1727f7a7e5b903%22%7D; slb_backend_token=eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI1MjM2QSIsInN1YiI6IntcImlkXCI6XCIyXCIsXCJuaWNrXCI6XCJhZG1pblwiLFwidXNlcm5hbWVcIjpcImFkbWluXCJ9IiwiaWF0IjoxNTkxNjk2MTY1LCJleHAiOjE1OTE5NTUzNjV9.rMjZ7wS3_T2Cp0s13TRcsDLa2ujIXm5Dm-NOBrMP5YM; JSESSIONID=BEC3E3EEFE6745EBB96BAC1E55F3EB07'
-
+axios.defaults.headers.common['auth'] = token || 'eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI1MjM2QSIsInN1YiI6IntcImlkXCI6XCIyXCIsXCJuaWNrXCI6XCJhZG1pblwiLFwidXNlcm5hbWVcIjpcImFkbWluXCJ9IiwiaWF0IjoxNTkxOTMzMjUxLCJleHAiOjE1OTIxOTI0NTF9.J-VpYY1hUyXChoWFlB-xjSYFu5fGpZZsE9wcWzYV3N4'
 axios.defaults.headers.common['Content-Type'] = 'application/json'
 
 const config: object = {

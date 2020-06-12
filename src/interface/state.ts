@@ -1,3 +1,4 @@
 export interface MainState {
-    rankMenu: object
+    rankMenu: object,
+    rankMenu1: object
 }

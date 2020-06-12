@@ -11,7 +11,6 @@ let routesArr:Array<any> = [];
   })
   routesArr = routesArr.concat(arr);
 }))(require.context('./modules/', true, /\.ts$/));
-console.log(routesArr)
 let routes: Array<RouteConfig> = routesArr
 
 const router = new VueRouter({

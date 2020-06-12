@@ -4,6 +4,7 @@ export default [
     {
         path: '/',
         name: 'Home',
+        cn: 'Home',
         meta: { // 是否使用 keep-alive
             keepAlive: true,
         },
@@ -12,8 +13,8 @@ export default [
     {
         path: '/about',
         name: 'About',
-        cn: '链接转换',
-        hidden: true,  // 是否隐藏在目录
+        cn: 'About',
+        hidden: false,  // 是否隐藏在目录
         
         component: () => import('@/views/About.vue')
     }
